@@ -13,22 +13,26 @@
             <div class="card-body p-5 bg-dark text-light border-0 shadow-none">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-              <form>
+              <form #registerForm="ngForm">
                 <div class="form-outline mb-4">
                   <input
+                    name="name"
+                    ngModel
+                    required
                     type="text"
-                    id="form3Example1cg"
                     class="form-control form-control-lg"
                   />
                   <label class="form-label" for="form3Example1cg"
-                    >Your Name</label
+                    >Il tuo nome</label
                   >
                 </div>
 
                 <div class="form-outline mb-4">
                   <input
+                    name="surname"
+                    ngModel
+                    required
                     type="text"
-                    id="form3Example1cg"
                     class="form-control form-control-lg"
                   />
                   <label class="form-label" for="form3Example1cg"
@@ -38,8 +42,10 @@
 
                 <div class="form-outline mb-4">
                   <input
+                    name="email"
+                    ngModel
+                    required
                     type="email"
-                    id="form3Example3cg"
                     class="form-control form-control-lg"
                   />
                   <label class="form-label" for="form3Example3cg"
@@ -48,11 +54,7 @@
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input
-                    type="password"
-                    id="form3Example4cg"
-                    class="form-control form-control-lg"
-                  />
+                  <input type="password" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example4cg"
                     >Password</label
                   >
@@ -60,26 +62,15 @@
 
                 <div class="form-outline mb-4">
                   <input
+                    name="password"
+                    ngModel
+                    required
                     type="password"
-                    id="form3Example4cdg"
                     class="form-control form-control-lg"
                   />
                   <label class="form-label" for="form3Example4cdg"
                     >Repeat your password</label
                   >
-                </div>
-
-                <div class="form-check d-flex justify-content-center mb-5">
-                  <input
-                    class="form-check-input me-2"
-                    type="checkbox"
-                    value=""
-                    id="form2Example3cg"
-                  />
-                  <label class="form-check-label" for="form2Example3g">
-                    I agree all statements in
-                    <a href="#!" class="text-body"><u>Terms of service</u></a>
-                  </label>
                 </div>
 
                 <div class="d-flex justify-content-center">
@@ -91,9 +82,11 @@
                   </button>
                 </div>
 
-                <p class="text-center text-muted mt-5 mb-0">
+                <p class="text-center mt-5 mb-0">
                   Have already an account?
-                  <a href="#!" class="fw-bold text-body"><u>Login here</u></a>
+                  <a [routerLink]="['/login']" class="fw-bold"
+                    ><u>Login here</u></a
+                  >
                 </p>
               </form>
             </div>
@@ -105,15 +98,18 @@
 </section>
 
 <script>
-  $('button').on('click', function() {
-    if ($('#name').val() === '') {
-    $('#name').addClass('form-error animated shake')
-    .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-    $(this).removeClass('animated shake');
-    });
+  $("button").on("click", function () {
+    if ($("#name").val() === "") {
+      $("#name")
+        .addClass("form-error animated shake")
+        .one(
+          "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+          function () {
+            $(this).removeClass("animated shake");
+          }
+        );
+    } else {
+      $("#name").removeClass("form-error");
     }
-    else {
-    $('#name').removeClass('form-error');
-    }
-    });
+  });
 </script>
