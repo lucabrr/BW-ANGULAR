@@ -1,7 +1,19 @@
 .col-2 {
   background-color: #1e1f22;
+  border-right: 2px solid #95177e;
 }
 
 .col-10 {
   background-color: #2b2d31;
+}
+
+.selected {
+  background-color: #36373d;
+}
+
+ul {
+  li:hover {
+    background-color: #36373d;
+    cursor: pointer;
+  }
 }
