@@ -1,0 +1,19 @@
+<div class="heading py-2 border-bottom border-1 border-black">
+    <h4 class="m-0 ms-2"># Canale Discode Generale</h4>
+</div>
+<div class="body flex-grow-1 p-2">
+    <div *ngFor="let msg of messaggi" class="flex flex-column my-1">
+        <div class="d-flex text-light align-items-center">
+            <h5 class="m-0 text-danger pe-3">{{ msg.sender }}</h5>
+            <p class="m-0">{{ msg.date }}</p>
+        </div>
+        <p class="mt-1">{{ msg.content }}</p>
+    </div>
+</div>
+<div class="footer-input">
+    <div class="input-group mb-2">
+        <input type="text" class="form-control bg-dark border-0 rounded-0 shadow-none text-white" placeholder="Scrivi.."
+            aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Invia</button>
+    </div>
+</div>
