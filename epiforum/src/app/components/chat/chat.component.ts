@@ -15,6 +15,8 @@ interface IMsg {
   styleUrls: ['./chat.component.scss'],
 })
 export class ChatComponent {
+  ngOnInit() {}
+
   messaggi: IMsg[] = [
     {
       sender: 'LizZo',
