@@ -1,3 +1,14 @@
 {
-  "users":[]
+  "users": [
+    {
+      "email": "ciccio@gmail.com",
+      "username": "ciccio",
+      "password": "password",
+      "name": "ciccino",
+      "surname": "graziani",
+      "isAdmin": false,
+      "avatar": "dioporco",
+      "id": 1
+    }
+  ]
 }
