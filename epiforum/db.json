@@ -1,13 +1,10 @@
 {
   "users": [
     {
-      "email": "ciccio@gmail.com",
-      "username": "ciccio",
-      "password": "password",
-      "name": "ciccino",
-      "surname": "graziani",
-      "isAdmin": false,
-      "avatar": "dioporco",
+      "email": "fabumufik@mailinator.com",
+      "password": "$2a$10$XGhnDTJ4dYXYxyCREw7SJet2wMTgkn.hULtq0GF5GU5OO9a20HcA.",
+      "name": "Robin Foster",
+      "surname": "Greer",
       "id": 1
     }
   ]

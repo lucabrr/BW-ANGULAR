@@ -65,11 +65,11 @@ export class AuthService {
       clearTimeout(this.authLogoutTimer)
     }
   }
-  // autoLogOut(axpDate: Date) {
-  //   const exit = axpDate.getTime() - new Date().getTime();
-  //   this.authLogoutTimer = setTimeout(() => {
-  //     this.logout()
-  //   }, exit)
-  // }
+  autoLogOut(axpDate: Date) {
+    const exit = axpDate.getTime() - new Date().getTime();
+    this.authLogoutTimer = setTimeout(() => {
+      this.logout()
+    }, exit)
+  }
 }
 
