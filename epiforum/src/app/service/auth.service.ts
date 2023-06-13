@@ -55,7 +55,6 @@ export class AuthService {
   logout() {
     this.authSubject.next(null);
     localStorage.removeItem('user');
-    this.router.navigate(['/auth', 'login']);
     if (this.authLogoutTimer) {
       clearTimeout(this.authLogoutTimer);
     }
