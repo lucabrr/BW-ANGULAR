@@ -7,6 +7,11 @@ input.ng-invalid.ng-touched {
   background-color: #80131397;
 }
 
+input.ng-valid.ng-touched{
+  border: 1px solid green;
+
+}
+
 section {
   background-image: url("/assets/img/bg-epicode.jpg");
   background-repeat: no-repeat;
