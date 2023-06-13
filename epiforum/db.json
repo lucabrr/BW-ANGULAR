@@ -1,3 +1,20 @@
 {
-  "users": []
+  "users": [
+    {
+      "email": "liz@liz.com",
+      "password": "$2a$10$hXSG9vf0B5ESfjW5rLO4BOL3eHvkO1PyUJocHLys7BDzcuYh0RPkm",
+      "name": "Marko",
+      "surname": "LizZo",
+      "username": "Mar.LizZo",
+      "id": 1
+    },
+    {
+      "email": "test@poi.org",
+      "password": "$2a$10$73s6DBLuAfhNyqn4GMSb4.Zf38sKeSZAGZvOKhT0eEWaNd8gnf2iC",
+      "name": "test",
+      "surname": "test",
+      "username": "testttt",
+      "id": 2
+    }
+  ]
 }

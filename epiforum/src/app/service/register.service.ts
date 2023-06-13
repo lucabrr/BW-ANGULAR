@@ -5,15 +5,13 @@ import { IauthResponse } from '../interfaces/IauthResponse';
 import { IregisterUser } from '../interfaces/IregisterUser';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RegisterService {
-  userUrl:string = "http://localhost:3000/users"
-  constructor( private http:HttpClient) { }
+  userUrl: string = 'http://localhost:3000/users';
+  constructor(private http: HttpClient) {}
 
-  submit(form:IregisterUser){
-    return this.http.post<IauthResponse>(this.userUrl,form)
-
-
+  submit(form: IregisterUser) {
+    return this.http.post<IauthResponse>(this.userUrl, form);
   }
 }

@@ -7,43 +7,38 @@ import { Router } from '@angular/router';
 import { IloginUser } from '../interfaces/IloginUser';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-
   jwtHelper: JwtHelperService = new JwtHelperService();
 
   loginUrl: string = 'http://localhost:3000/login';
-
 
   private authSubject = new BehaviorSubject<null | IauthResponse>(null);
 
   user$ = this.authSubject.asObservable();
 
-  isLoggedIn$ = this.user$.pipe(map(dato => Boolean(dato)));
+  isLoggedIn$ = this.user$.pipe(map((dato) => Boolean(dato)));
 
   authLogoutTimer: any;
 
-  constructor(
-    private http: HttpClient,
-    private router: Router
-  ) {
+  constructor(private http: HttpClient, private router: Router) {
     this.restoreUser();
   }
 
   login(data: IloginUser) {
-    return this.http.post<IauthResponse>(this.loginUrl, data)
-      .pipe(tap(data => {
-
+    return this.http.post<IauthResponse>(this.loginUrl, data).pipe(
+      tap((data) => {
         this.authSubject.next(data);
 
         localStorage.setItem('user', JSON.stringify(data));
-        const endDate = this.jwtHelper
-          .getTokenExpirationDate(data.accessToken) as Date
-      }),
-      )
+        const endDate = this.jwtHelper.getTokenExpirationDate(
+          data.accessToken
+        ) as Date;
+        this.autoLogOut(endDate);
+      })
+    );
   }
-
 
   restoreUser() {
     const userSign = localStorage.getItem('user');
@@ -56,20 +51,18 @@ export class AuthService {
     }
   }
 
-
   logout() {
     this.authSubject.next(null);
     localStorage.removeItem('user');
-    this.router.navigate(['/auth', 'login'])
+    this.router.navigate(['/auth', 'login']);
     if (this.authLogoutTimer) {
-      clearTimeout(this.authLogoutTimer)
+      clearTimeout(this.authLogoutTimer);
     }
   }
   autoLogOut(axpDate: Date) {
     const exit = axpDate.getTime() - new Date().getTime();
     this.authLogoutTimer = setTimeout(() => {
-      this.logout()
-    }, exit)
+      this.logout();
+    }, exit);
   }
 }
-
