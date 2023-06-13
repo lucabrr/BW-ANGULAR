@@ -6,5 +6,6 @@ export interface IregisterUser {
   surname:string
   isAdmin?:boolean
   avatar?:string
+  id?:number
 
 }
