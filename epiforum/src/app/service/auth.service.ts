@@ -49,6 +49,7 @@ export class AuthService {
     if (this.jwtHelper.isTokenExpired(user.accessToken)) {
       return;
     }
+    this.authSubject.next(user);
   }
 
   logout() {
