@@ -105,7 +105,15 @@
 </section>
 
 <script>
-  $("header").append("<div class='glitch-window'></div>");
-
-  $("h1.glitched").clone().appendTo(".glitch-window");
+  $('button').on('click', function() {
+    if ($('#name').val() === '') {
+    $('#name').addClass('form-error animated shake')
+    .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+    $(this).removeClass('animated shake');
+    });
+    }
+    else {
+    $('#name').removeClass('form-error');
+    }
+    });
 </script>
