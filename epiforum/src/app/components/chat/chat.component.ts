@@ -33,5 +33,45 @@ export class ChatComponent {
       content: 'Ho il nome più figo del mondo',
       date: '13/06/2023 11:32',
     },
+    {
+      sender: 'NicoStaffo',
+      content: 'Secondo messaggio',
+      date: '13/06/2023 11:21',
+    },
+    {
+      sender: 'Mercurio Giove',
+      content: 'Ho il nome più figo del mondo',
+      date: '13/06/2023 11:32',
+    },
+    {
+      sender: 'NicoStaffo',
+      content: 'Secondo messaggio',
+      date: '13/06/2023 11:21',
+    },
+    {
+      sender: 'Mercurio Giove',
+      content: 'Ho il nome più figo del mondo',
+      date: '13/06/2023 11:32',
+    },
+    {
+      sender: 'NicoStaffo',
+      content: 'Secondo messaggio',
+      date: '13/06/2023 11:21',
+    },
+    {
+      sender: 'Mercurio Giove',
+      content: 'Ho il nome più figo del mondo',
+      date: '13/06/2023 11:32',
+    },
+    {
+      sender: 'NicoStaffo',
+      content: 'Secondo messaggio',
+      date: '13/06/2023 11:21',
+    },
+    {
+      sender: 'Mercurio Giove',
+      content: 'Ho il nome più figo del mondo',
+      date: '13/06/2023 11:32',
+    },
   ];
 }
