@@ -1,22 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { IloginUser } from 'src/app/interfaces/IloginUser';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  constructor(private authSvc: AuthService) {
-  }
+  constructor(
+    private authSvc: AuthService,
+    private modalService: NgbModal,
+    private router: Router
+  ) {}
   data: IloginUser = {
     email: '',
-    password: ''
-  }
+    password: '',
+  };
+  modalTitle: string = 'Titolo';
+  modalTitleUser: string = 'User';
+  modalContent: string = 'Content';
+  @ViewChild('content')
+  mymodal!: ElementRef;
   login() {
-    this.authSvc.login(this.data).subscribe(access => {
-      alert(`log in effettuato come ${access.user.name}`)
-    })
+    this.authSvc.login(this.data).subscribe((access) => {
+      this.modalTitle = `Benvenuto, `;
+      this.modalTitleUser = access.user.username;
+      this.modalContent = 'Sarai reindirizzato alla home in 3 secondi..';
+      this.open(this.mymodal);
+      setTimeout(() => this.redirectNow(), 3000);
+    });
+  }
+
+  open(content: any) {
+    this.modalService.open(content);
+  }
+
+  dismiss() {
+    this.modalService.dismissAll();
+  }
+
+  redirectNow() {
+    this.dismiss();
+    this.router.navigate(['']);
   }
 }
