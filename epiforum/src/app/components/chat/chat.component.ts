@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { IauthResponse } from 'src/app/interfaces/IauthResponse';
 import { IChatMsg } from 'src/app/interfaces/ichat-msg';
 import { ChatService } from 'src/app/service/chat.service';
 
@@ -18,11 +19,13 @@ export class ChatComponent {
   chatName: string = 'Generale';
   myMessage: string = '';
   chatSub!: Subscription;
+  username!: string;
 
   constructor(private svc: ChatService) {}
 
   ngOnInit() {
     this.getChannelName();
+    this.getUsername();
     const worker = new Worker('assets/worker.js');
     // worker.postMessage(
     //   `https://prova-f96b8-default-rtdb.europe-west1.firebasedatabase.app/${this.chat}.json`
@@ -40,6 +43,13 @@ export class ChatComponent {
 
   ngOnDestroy() {
     if (this.chatSub) this.chatSub.unsubscribe();
+  }
+
+  getUsername(): void {
+    if (localStorage.getItem('user')) {
+      let obj: IauthResponse = JSON.parse(localStorage.getItem('user')!);
+      this.username = obj.user.username;
+    }
   }
 
   getChannelName(): void {
@@ -64,7 +74,7 @@ export class ChatComponent {
 
   sendMessage(): void {
     let obj: IChatMsg = {
-      sender: 'LizZo',
+      sender: this.username,
       content: this.myMessage,
       date: new Date(),
     };

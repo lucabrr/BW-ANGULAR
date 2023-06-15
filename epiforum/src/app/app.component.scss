@@ -4,12 +4,13 @@ app-navbar {
 
 main {
   height: 82vh;
+  margin-bottom: calc(8vh);
 }
 
 app-footer {
-  // position: fixed;
-  // bottom: 0;
+  position: fixed;
+  bottom: 0;
   height: 8vh;
-  // width: 100%;
+  width: 100%;
   background-color: #1e1f22;
 }

@@ -73,8 +73,8 @@
     <div *ngIf="!islogged" class="d-flex flex-column justify-content-center align-items-center h-100 text-white">
         <h2 class="m-0">Per poter accedere ai nostri servizi, devi prima accedere!</h2>
         <div class="mt-5 w-75 d-flex justify-content-evenly">
-            <button class="btn px-5 text-white custom-gradient">Accedi</button>
-            <button class="btn px-5 text-white custom-gradient">Registrati</button>
+            <button [routerLink]="'/login'" class="btn px-5 text-white custom-gradient">Accedi</button>
+            <button [routerLink]="'/register'" class="btn px-5 text-white custom-gradient">Registrati</button>
         </div>
     </div>
 </div>
