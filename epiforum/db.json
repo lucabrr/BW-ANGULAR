@@ -15,6 +15,14 @@
       "surname": "test",
       "username": "testttt",
       "id": 2
+    },
+    {
+      "email": "man@gm.com",
+      "password": "$2a$10$Sz.8BFOdzsLSAHKC2GNh3.UrmLpgv3Q7wBJwbd4AGYKp3fxjbZD3m",
+      "name": "Manuel",
+      "surname": "fffff",
+      "username": "Manuel",
+      "id": 3
     }
   ]
 }
