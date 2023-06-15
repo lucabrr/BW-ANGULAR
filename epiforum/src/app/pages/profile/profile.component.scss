@@ -7,8 +7,10 @@ section {
         max-width: 960px;
 
         .row {
-            label {
-                color: white
+            .col {
+                label {
+                    color: white
+                }
             }
         }
     }
