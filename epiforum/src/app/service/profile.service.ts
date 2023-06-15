@@ -12,9 +12,9 @@ import { IregisterUser } from '../interfaces/IregisterUser';
 export class ProfileService {
   userUrl: string = 'http://localhost:3000/users'
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  editProfile(form:NgForm,id:number){
-    return this.http.put<IregisterUser>(this.userUrl+"/"+id ,form.value)
+  editProfile(form: NgForm, id: number) {
+    return this.http.put<IregisterUser>(this.userUrl + "/" + id, form.value)
   }
 }
