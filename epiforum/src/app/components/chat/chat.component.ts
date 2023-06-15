@@ -22,7 +22,7 @@ export class ChatComponent {
   chatSub!: Subscription;
   username!: string;
 
-  constructor(private svc: ChatService) {}
+  constructor(private svc: ChatService) { }
 
   ngOnInit() {
     this.getChannelName();

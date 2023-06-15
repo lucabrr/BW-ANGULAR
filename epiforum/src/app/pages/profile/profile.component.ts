@@ -13,31 +13,28 @@ import { ProfileService } from 'src/app/service/profile.service';
 export class ProfileComponent implements OnInit {
 
 
-  constructor(private router:Router, private profileSvc:ProfileService){}
+  constructor(private router: Router, private profileSvc: ProfileService) { }
 
-  user!:IauthResponse
+  user!: IauthResponse
 
   ngOnInit(): void {
     const userJson = localStorage.getItem("user")
-    if(!userJson){
+    if (!userJson) {
       this.router.navigate(['/login'])
-    }else
-    {
+    } else {
       const userParsed = JSON.parse(userJson)
       this.user = userParsed
-
-
     }
-
-
   }
 
-  edit(form:NgForm,){
-    this.profileSvc.editProfile(form,this.user.user.id).subscribe((res) => {console.log(res),
+  edit(form: NgForm,) {
+    this.profileSvc.editProfile(form, this.user.user.id).subscribe((res) => {
+      console.log(res),
       this.user.user = res
       const userStg = JSON.stringify(this.user)
-      localStorage.setItem("user",userStg)
-      this.router.navigate([""])})
+      localStorage.setItem("user", userStg)
+      this.router.navigate([""])
+    })
   }
 
 
