@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { IauthResponse } from 'src/app/interfaces/IauthResponse';
 import { AuthService } from 'src/app/service/auth.service';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-navbar',
@@ -12,6 +13,7 @@ export class NavbarComponent {
   isLogged: boolean = false;
   username: string = '';
   loggedSub!: Subscription;
+  public isCollapsed = false;
 
   constructor(private svc: AuthService) {
     this.checkUserLogged();
