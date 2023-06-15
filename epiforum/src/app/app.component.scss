@@ -14,3 +14,16 @@ app-footer {
   width: 100%;
   background-color: #1e1f22;
 }
+
+@media screen and (max-width: 768px){
+app-footer{
+  display: none;
+
+}
+main{
+  height: 90vh ;
+  margin-bottom: 0;
+}
+}
+
+
