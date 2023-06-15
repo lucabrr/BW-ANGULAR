@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { IauthResponse } from 'src/app/interfaces/IauthResponse';
@@ -16,6 +16,7 @@ import { ChatService } from 'src/app/service/chat.service';
 export class ChatComponent {
   messaggi: IChatMsg[] = [];
   @Input() chat!: string;
+  @ViewChild('chatContainer') chatCont!: ElementRef;
   chatName: string = 'Generale';
   myMessage: string = '';
   chatSub!: Subscription;
@@ -39,6 +40,10 @@ export class ChatComponent {
         this.messaggi = data;
       }
     };
+    setTimeout(() => {
+      this.chatCont.nativeElement.scrollTop =
+        this.chatCont.nativeElement.scrollHeight;
+    }, 2600);
   }
 
   ngOnDestroy() {
@@ -85,6 +90,10 @@ export class ChatComponent {
       .subscribe((res) => {
         this.messaggi = res;
         this.myMessage = '';
+        setTimeout(() => {
+          this.chatCont.nativeElement.scrollTop =
+            this.chatCont.nativeElement.scrollHeight;
+        }, 200);
       });
   }
 }

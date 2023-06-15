@@ -2,7 +2,7 @@
     <div class="heading pt-3 pb-2 border-bottom border-1 border-black">
         <h4 class="m-0 ms-2"># Canale Discode {{ chatName }}</h4>
     </div>
-    <div class="body flex-grow-1 overflow-y-auto px-2 my-2">
+    <div #chatContainer class="body flex-grow-1 overflow-y-auto px-2 my-2">
         <div *ngFor="let msg of messaggi" class="flex flex-column my-1">
             <div class="d-flex text-light align-items-center">
                 <h5 class="m-0 text-danger pe-3">{{ msg.sender }}</h5>

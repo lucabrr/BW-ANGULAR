@@ -18,7 +18,6 @@ export class HomeComponent {
   ngOnInit() {
     this.svc.isLoggedIn$.subscribe((res) => {
       this.islogged = res;
-      console.log(res);
     });
   }
 
