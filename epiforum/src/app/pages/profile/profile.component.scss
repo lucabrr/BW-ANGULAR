@@ -1,0 +1,15 @@
+section {
+    background-image: url("/assets/img/bg-epicode.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        max-width: 960px;
+
+        .row {
+            label {
+                color: white
+            }
+        }
+    }
+}

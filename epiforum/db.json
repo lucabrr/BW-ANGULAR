@@ -24,6 +24,14 @@
       "surname": "Oliver",
       "username": "suuuuka",
       "id": 3
+    },
+    {
+      "email": "nico.stepny@ganal.com",
+      "password": "$2a$10$LZWAFuiULuFi7HI1lzvo4uB5s46RcSLtTbSJBISZRLv3vDyndnTHi",
+      "name": "Niccolò",
+      "surname": "Staffolani",
+      "username": "N1costaffo",
+      "id": 4
     }
   ]
 }
