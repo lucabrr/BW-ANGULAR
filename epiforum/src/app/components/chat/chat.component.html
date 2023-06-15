@@ -5,7 +5,7 @@
     <div #chatContainer class="body flex-grow-1 overflow-y-auto px-2 my-2">
         <div *ngFor="let msg of messaggi" class="flex flex-column my-1">
             <div class="d-flex text-light align-items-center">
-                <h5 class="m-0 text-danger pe-3">{{ msg.sender }}</h5>
+                <h5 class="m-0 purple pe-3">{{ msg.sender }}</h5>
                 <p *ngIf="msg.date != null" class="m-0">{{ msg.date | date : 'short' }}</p>
             </div>
             <p class="mt-1">{{ msg.content }}</p>
