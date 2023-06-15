@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-1 col-5"></div>
-      <div class="col-lg-10 col-md-4 card">
+      <div class="col-lg-10 col-md-4">
         <form #profileForm="ngForm" (ngSubmit)="edit(profileForm)">
           <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
@@ -12,7 +12,7 @@
           </div>
 
           <div class="form-group">
-            <label for="exampleInputEmail1">password</label>
+            <label for="exampleInputEmail1">Password</label>
             <input type="password" class="form-control" aria-describedby="emailHelp" placeholder="password"
               [(ngModel)]="user.user.password" name="password" />
           </div>
@@ -39,7 +39,7 @@
               [(ngModel)]="user.user.username" name="username" />
           </div>
           <div class="d-flex justify-content-center pt-2">
-            <button type="submit" class="btn btn-primary ">modifica</button>
+            <button type="submit" class="btn custom-gradient">Modifica</button>
           </div>
         </form>
       </div>
