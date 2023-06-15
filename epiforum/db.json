@@ -7,6 +7,14 @@
       "surname": "Cristo",
       "username": "Mar.LizZo",
       "id": 1
+    },
+    {
+      "email": "xoja@mailinator.com",
+      "password": "$2a$10$GHYN85m1YOHddQ7jXZQOse0o3js/unhELV/P8SzP8YW/7rD5lwODm",
+      "name": "Leigh Conley",
+      "surname": "Orr",
+      "username": "sukka",
+      "id": 2
     }
   ]
 }

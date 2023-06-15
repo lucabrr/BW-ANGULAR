@@ -17,3 +17,12 @@ a:hover{
   text-decoration-color: rgb(105, 4, 122)!important;
   text-decoration-thickness: 2px !important;
 }
+a{
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 768px){
+  #spanRes{
+    display: none !important;
+  }
+}
