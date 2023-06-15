@@ -1,11 +1,3 @@
-.col-2 {
-  background-color: #1e1f22;
-}
-
-.col-10 {
-  background-color: #2b2d31;
-}
-
 .selected {
   background-color: #36373d;
 }
@@ -35,8 +27,18 @@ ul {
   }
 }
 
+.mobile-col {
+  height: max-content;
+}
+
 @media screen and (max-width: 768px) {
   .desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mobile {
     display: none;
   }
 }

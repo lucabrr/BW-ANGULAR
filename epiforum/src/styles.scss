@@ -7,6 +7,21 @@ html {
   height: 100%;
 }
 
+body {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #101010;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #2b2d31;
+    border-radius: 10px;
+  }
+}
+
 a {
   color: white !important;
 }
