@@ -34,3 +34,13 @@ ul {
     );
   }
 }
+
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.bg-custom {
+  background-color: #2b2d31;
+}

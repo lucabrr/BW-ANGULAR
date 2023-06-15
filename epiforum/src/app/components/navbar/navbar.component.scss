@@ -1,8 +1,5 @@
 .wi {
-  width: 200px;
-}
-.h {
-  height: 50px;
+  width: 160px;
 }
 
 .purple {
@@ -12,17 +9,17 @@
 nav {
   border-bottom: 1px solid #781795;
 }
-a:hover{
+a:hover {
   text-decoration: underline !important;
-  text-decoration-color: rgb(105, 4, 122)!important;
+  text-decoration-color: rgb(105, 4, 122) !important;
   text-decoration-thickness: 2px !important;
 }
-a{
+a {
   margin-right: 15px;
 }
 
-@media screen and (max-width: 768px){
-  #spanRes{
+@media screen and (max-width: 768px) {
+  #spanRes {
     display: none !important;
   }
 }
