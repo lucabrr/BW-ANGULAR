@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject, map, tap } from 'rxjs';
-import { IauthResponse } from '../interfaces/IauthResponse';
+import { IauthResponse } from 'src/app/interfaces/IauthResponse';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { IloginUser } from '../interfaces/IloginUser';
+import { IloginUser } from 'src/app/interfaces/IloginUser';
 
 @Injectable({
   providedIn: 'root',

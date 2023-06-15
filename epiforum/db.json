@@ -1,37 +1,3 @@
 {
-  "users": [
-    {
-      "email": "liz@liz.com",
-      "password": "$2a$10$hXSG9vf0B5ESfjW5rLO4BOL3eHvkO1PyUJocHLys7BDzcuYh0RPkm",
-      "name": "Marko",
-      "surname": "LizZo",
-      "username": "Mar.LizZo",
-      "id": 1
-    },
-    {
-      "email": "test@poi.org",
-      "password": "$2a$10$73s6DBLuAfhNyqn4GMSb4.Zf38sKeSZAGZvOKhT0eEWaNd8gnf2iC",
-      "name": "test",
-      "surname": "test",
-      "username": "testttt",
-      "id": 2
-    },
-    {
-      "email": "hivuga@mailinator.com",
-      "password": "$2a$10$QFgxwSrrT29w4VE/rPFCD.m9ujRlYrGWqkilSyw0O3mp6QBOUUSwm",
-      "avatar": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJAAvgMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAFBgMEBwIBAAj/xAA+EAACAQMBBQYDBwIEBgMAAAABAgMABBEFBhIhMUETIlFhcYEUMpEHI0JSobHB0fAVJDPhU2JykqLxFkOC/8QAGgEAAgMBAQAAAAAAAAAAAAAAAwQAAQIFBv/EACQRAAMAAgICAgMAAwAAAAAAAAABAgMREiEEMQVBEyJRMmFx/9oADAMBAAIRAxEAPwC7LrCqMKo+lCrzaZwzwxOkR5b24CfamK82KumidLadVlI7rsuR+hpJ1bYraOxckWvxcf54DvH6Hj+lNrNFegrRas72WSUlL11Y88ueNGYLu7TAe7QgeQpCt3mtZykkTRupwUdcEfWjkWsRphGtUY8M4zx/WtVSaMeh1XULwPGkV1ZuwAypHP8Aij1vdGSMfFQ2yP5YOfpSRpN1az3AbsYiPAueFOdjcwkrGjQA4xuxgnh7Unl/iNLRzOBgyxboQHBA/ivorpxyAx51NeSxQx7zoSpPyIwDH2P9aWL3aSxsphHOLiIn5RLHuk1UX1pkG2CffOGIFWXeMLhhv56KhakT/wCTWkpza3MhP5VUMPp/vUi7XTIw3rdf+o5Ofb/3RPZnaGS90vSb2NkuNOBBGT/lmH7ClDU/s/0m8Vm0nU5rOTHBH7yj6jI+przUNevdRwGlCRj8ERKg+v8AvUmnXDxR9ox4Dmcj9iP2qaK2jNdo9D2g2affncSRA8J48Mv1H84NUrfay87GS2vcXEEi7rqw3gR7/",
-      "name": "Jordan Schroeder",
-      "surname": "Oliver",
-      "username": "suuuuka",
-      "id": 3
-    },
-    {
-      "email": "nico.stepny@ganal.com",
-      "password": "$2a$10$LZWAFuiULuFi7HI1lzvo4uB5s46RcSLtTbSJBISZRLv3vDyndnTHi",
-      "name": "Niccolò",
-      "surname": "Staffolani",
-      "username": "N1costaffo",
-      "id": 4
-    }
-  ]
+  "users": []
 }
