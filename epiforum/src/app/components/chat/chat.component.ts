@@ -53,7 +53,8 @@ export class ChatComponent {
       str.endsWith('.png') ||
       str.endsWith('.jpg') ||
       str.endsWith('.jpeg') ||
-      str.endsWith('.gif')
+      str.endsWith('.gif') ||
+      str.startsWith('http')
     );
   }
 
