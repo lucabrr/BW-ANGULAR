@@ -139,11 +139,17 @@
       <app-chat *ngIf="!refreshing" [chat]="selectedChannel" class="d-flex flex-column h-100 text-light"></app-chat>
     </div>
   </div>
-  <div *ngIf="!islogged" class="d-flex flex-column justify-content-center align-items-center h-100 text-white">
-    <h2 class="m-0">
-      Per poter usare ai nostri servizi, devi prima accedere!
+  <div *ngIf="!islogged" class="d-flex flex-column h-100 text-white">
+    <h2 class="m-0 py-3 pb-4 px-2 bg-custom-alt rounded-2 mt-5">
+      Benvenuto su DISCODE
     </h2>
-    <div class="mt-5 w-75 d-flex justify-content-evenly">
+    <p class="m-0 mt-3 ms-2">Progetto del Team 2, il migliore al mondo ovviamente.</p>
+    <p class="m-0 mt-2 ms-2">Single Page App sviluppata con Angular. L'intento era di replicare una sorta di Discord nel
+      breve tempo a disposizione.</p>
+    <p class="m-0 mt-3 ms-2">Il nostro progetto utilizza JSON Server per l'autenticazione. Per ricevere e caricare i
+      dati delle chat usiamo invece un web worker collegato a degli endpoint su Firebase.</p>
+    <h4 class="m-0 mt-4 ms-2">Per poter usare i nostri servizi devi essere Loggato!</h4>
+    <div class="mt-5 w-100 d-flex justify-content-evenly">
       <button [routerLink]="'/login'" class="btn px-5 text-white custom-gradient">
         Accedi
       </button>
