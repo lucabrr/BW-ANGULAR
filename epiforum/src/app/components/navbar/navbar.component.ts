@@ -29,4 +29,23 @@ export class NavbarComponent {
       .subscribe((res) => (this.username = res!.user.username))
       .unsubscribe();
   }
+
+  checkImg():boolean{
+    const userJson = localStorage.getItem("user")
+    if (!userJson) {
+      return false
+    }else
+    {
+      const user:IauthResponse = JSON.parse(userJson)
+
+     return user.user.avatar ?  true : false
+    }
+
+  }
+
+  getImg():string{
+    const userJson = localStorage.getItem("user")
+    const user:IauthResponse = JSON.parse(userJson!)
+    return user.user.avatar!
+  }
 }
