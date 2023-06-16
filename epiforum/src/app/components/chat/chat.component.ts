@@ -28,9 +28,9 @@ export class ChatComponent {
     this.getChannelName();
     this.getUsername();
     const worker = new Worker('assets/worker.js');
-    // worker.postMessage(
-    //   `https://prova-f96b8-default-rtdb.europe-west1.firebasedatabase.app/${this.chat}.json`
-    // );
+    worker.postMessage(
+      `https://prova-f96b8-default-rtdb.europe-west1.firebasedatabase.app/${this.chat}.json`
+    );
     worker.onmessage = (event) => {
       const data = event.data;
 
