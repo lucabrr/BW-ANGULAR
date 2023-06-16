@@ -1,90 +1,46 @@
 <nav class="navbar h-100 navbar-expand-lg bg-dark" data-bs-theme="dark">
   <div class="container-fluid h">
     <a class="navbar-brand wi" href="https://epicode.com/it/" target="_blank">
-      <img
-        src="/assets/img/httpsepicode.comwp-contentuploads202205footer-logo.svg (1).png"
-        alt="logo"
-        class="wi me-0"
-      />
+      <img src="/assets/img/httpsepicode.comwp-contentuploads202205footer-logo.svg (1).png" alt="logo"
+        class="wi me-0" />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      (click)="isCollapsed = !isCollapsed"
-      [attr.aria-expanded]="!isCollapsed"
-      aria-controls="collapseExample"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+      (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div
-      class="collapse navbar-collapse"
-      id="navbarNav"
-      #collapse="ngbCollapse"
-      [(ngbCollapse)]="isCollapsed"
-    >
+    <div class="collapse navbar-collapse" id="navbarNav" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/']">Home</a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="https://epicode.com/it/docenti/"
-            target="_blank"
-            >Docenti
+          <a class="nav-link" href="https://epicode.com/it/docenti/" target="_blank">Docenti
           </a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="https://epicode.com/it/candidati/#"
-            target="_blank"
-            >Corsi</a
-          >
+          <a class="nav-link" href="https://epicode.com/it/candidati/#" target="_blank">Corsi</a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="https://epicode.com/it/chi-siamo/"
-            target="_blank"
-            >Chi siamo</a
-          >
+          <a class="nav-link" href="https://epicode.com/it/chi-siamo/" target="_blank">Chi siamo</a>
         </li>
       </ul>
       <ul class="navbar-nav me-4">
         <li *ngIf="!isLogged" class="nav-item">
-          <a
-            [routerLink]="['/login']"
-            class="nav-link text-decoration-none text-light"
-            >Login</a
-          >
+          <a [routerLink]="['/login']" class="nav-link text-decoration-none text-light">Login</a>
         </li>
         <li *ngIf="!isLogged" class="nav-item">
-          <a
-            [routerLink]="['/register']"
-            class="nav-link text-decoration-none text-light"
-            >Registrati</a
-          >
+          <a [routerLink]="['/register']" class="nav-link text-decoration-none text-light">Registrati</a>
         </li>
         <li *ngIf="isLogged" class="nav-item">
           <p class="nav-link text-decoration-none m-0 text-light">
             Ciao,
-            <a class="text-decoration-none" [routerLink]="['/profile']"
-              ><span class="m-0 purple">{{ username }}</span></a
-            >
+            <a class="text-decoration-none" [routerLink]="['/profile']"><span class="m-0 purple">{{ username
+                }}</span></a>
           </p>
         </li>
         <li *ngIf="isLogged" class="nav-item">
-          <a
-            [routerLink]="['/logout']"
-            class="nav-link text-decoration-none text-light"
-            >Logout</a
-          >
+          <a [routerLink]="['/logout']" class="nav-link text-decoration-none text-light">Logout</a>
         </li>
       </ul>
     </div>
