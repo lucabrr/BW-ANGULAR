@@ -8,7 +8,8 @@
                 <h5 class="m-0 purple pe-3">{{ msg.sender }}</h5>
                 <p *ngIf="msg.date != null" class="m-0">{{ msg.date | date : 'short' }}</p>
             </div>
-            <p class="mt-1">{{ msg.content }}</p>
+            <p *ngIf="!isImage(msg.content)" class="mt-1">{{ msg.content }}</p>
+            <img *ngIf="isImage(msg.content)" [src]="msg.content" class="my-2 image-chat">
         </div>
     </div>
     <div class="footer-input">

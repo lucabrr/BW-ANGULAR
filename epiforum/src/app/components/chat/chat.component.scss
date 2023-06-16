@@ -8,6 +8,10 @@
   }
 }
 
+.image-chat {
+  max-width: 60%;
+}
+
 .body {
   &::-webkit-scrollbar {
     width: 6px;
@@ -21,6 +25,7 @@
     background: #2b2d31;
     border-radius: 10px;
   }
+  scroll-behavior: smooth;
 }
 
 .purple {

@@ -37,13 +37,24 @@ export class ChatComponent {
       if (data.error) {
         console.error(data.error);
       } else {
-        this.messaggi = data;
+        if (this.messaggi.length != data.length) {
+          this.messaggi = data;
+          setTimeout(() => {
+            this.chatCont.nativeElement.scrollTop =
+              this.chatCont.nativeElement.scrollHeight;
+          }, 500);
+        }
       }
     };
-    setTimeout(() => {
-      this.chatCont.nativeElement.scrollTop =
-        this.chatCont.nativeElement.scrollHeight;
-    }, 2600);
+  }
+
+  isImage(str: string): boolean {
+    return (
+      str.endsWith('.png') ||
+      str.endsWith('.jpg') ||
+      str.endsWith('.jpeg') ||
+      str.endsWith('.gif')
+    );
   }
 
   ngOnDestroy() {
